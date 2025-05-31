@@ -1,0 +1,113 @@
+/* Reset and base */
+  * {
+    box-sizing: border-box;
+  }
+  body, html {
+    margin: 0; padding: 0; height: 100%;
+    background: linear-gradient(135deg, #0d1b2a, #1b263b);
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+  }
+  #game {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  /* Player */
+  #player {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    margin-left: -30px;
+    background: conic-gradient(#39ff14 0 120deg, transparent 120deg 360deg);
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 15px #39ff14, inset 0 0 10px #3dff17;
+    transition: left 0.05s linear;
+  }
+  /* Player barrel */
+  #player::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 10px;
+    height: 20px;
+    margin-left: -5px;
+    background: #39ff14;
+    border-radius: 3px;
+    box-shadow: 0 0 10px #39ff14;
+  }
+  /* Bullets */
+  .bullet {
+    position: absolute;
+    width: 6px;
+    height: 20px;
+    background: #ff416c;
+    box-shadow: 0 0 10px #ff416c;
+    border-radius: 3px;
+  }
+  /* Targets */
+  .target {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle at center, #ff6347, #c0392b);
+    border-radius: 50%;
+    box-shadow: 0 0 15px #ff6347 inset, 0 0 20px #ff6347;
+    user-select: none;
+  }
+  /* Score */
+  #scoreboard {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 8px #ff6f91;
+  }
+  /* Instructions */
+  #instructions {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 16px;
+    color: #a0a0a0;
+    user-select: none;
+  }
+  /* Game Over Screen */
+  #gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(13, 27, 42, 0.9);
+    border: 3px solid #ff416c;
+    border-radius: 10px;
+    padding: 30px 50px;
+    text-align: center;
+    font-size: 28px;
+    display: none;
+    color: #ff416c;
+    box-shadow: 0 0 20px #ff416c;
+  }
+  #restartBtn {
+    margin-top: 20px;
+    background: #ff416c;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #ff416c;
+    transition: background 0.3s ease;
+  }
+#restartBtn:hover {
+  background: #c0392b;
+}
+
+
